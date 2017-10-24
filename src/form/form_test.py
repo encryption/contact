@@ -1,12 +1,12 @@
 import unittest
-import submission
+import form
 
 
 class TestFormSubmission(unittest.TestCase):
 
-    def test_submission(self):
-        response = submission.submit('bob')
-        self.assertEqual(response, 'hellobob')
+    def test_submit(self):
+        response = form.submit('bob')
+        self.assertEqual(response, True)
 
 
 if __name__ == "__main__":

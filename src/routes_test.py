@@ -21,6 +21,7 @@ class FlaskrTestCase(unittest.TestCase):
 
     @mock.patch('form.form.submit')
     def test_submit_with_data(self, mock):
+
         response = self.app.post(
             '/',
             data='name=bob',
@@ -28,7 +29,7 @@ class FlaskrTestCase(unittest.TestCase):
             content_type='application/x-www-form-urlencoded',
         )
 
-        assert mock.called
+        self.assertEqual(mock.called, True)
         self.assertEqual(mock.call_args[0][0].get('name'), 'bob')
         self.assertEqual(response.location, 'http://google.com?success')
 
