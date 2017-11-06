@@ -1,0 +1,15 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: nodetact
+    environment:
+    - MAILGUN_KEY=blah
+    - MAILGUN_DOMAIN=blah
+    - SEND_TO=me@email.com
+    ports:
+      - 3000:80
+    volumes:
+      - ./src:/src
