@@ -65,4 +65,6 @@ status: {}
 
 ## Testing
 
-`nosetests --with-coverage`
+Tests will be added soon
+
+`npm test`
