@@ -31,26 +31,27 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: contact
+  creationTimestamp: null
+  labels:
+    service: contact
 spec:
   replicas: 3
   strategy: {}
   template:
+    metadata:
+      labels:
+        service: contact
     spec:
       containers:
       - image: zackify/contact:latest
-        name: blog
+        name: contact
         env:
         - name: MAILGUN_KEY
           value: "blah"
         - name: MAILGUN_DOMAIN
           value: "blah"
         - name: SEND_TO
-          value: "me@email.com"
-        livenessProbe:
-          tcpSocket:
-            port: 80
-          initialDelaySeconds: 5
-          timeoutSeconds: 1
+          value: "email@gmail.com"
         resources: {}
       restartPolicy: Always
 status: {}
