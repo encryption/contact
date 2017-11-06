@@ -12,7 +12,7 @@
 ```
 services:
   web:
-    image: contact:latest
+    image: zackify/contact:latest
     environment:
     - MAILGUN_KEY=blah
     - MAILGUN_DOMAIN=blah
@@ -37,7 +37,7 @@ spec:
   template:
     spec:
       containers:
-      - image: contact:latest
+      - image: zackify/contact:latest
         name: blog
         env:
         - name: MAILGUN_KEY
