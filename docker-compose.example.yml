@@ -4,7 +4,8 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    image: nodetact
+    command: ./node_modules/.bin/nodemon --watch "./src" -x "node --experimental-modules" src/index.mjs
+    image: contact
     environment:
     - MAILGUN_KEY=blah
     - MAILGUN_DOMAIN=blah

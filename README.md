@@ -12,7 +12,7 @@
 ```
 services:
   web:
-    image: nodetact:latest
+    image: contact:latest
     environment:
     - MAILGUN_KEY=blah
     - MAILGUN_DOMAIN=blah
@@ -37,7 +37,7 @@ spec:
   template:
     spec:
       containers:
-      - image: nodetact:latest
+      - image: contact:latest
         name: blog
         env:
         - name: MAILGUN_KEY
