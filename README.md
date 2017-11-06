@@ -38,7 +38,7 @@ spec:
     spec:
       containers:
       - image: zackify/contact:latest
-        name: blog
+        name: contact
         env:
         - name: MAILGUN_KEY
           value: "blah"
