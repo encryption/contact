@@ -14,6 +14,7 @@ services:
   web:
     image: zackify/contact:latest
     environment:
+    - REDIRECT_URL= #optional. will use request referer if not supplied
     - MAILGUN_KEY=blah
     - MAILGUN_DOMAIN=blah
     - SEND_TO=me@email.com

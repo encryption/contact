@@ -10,6 +10,7 @@ services:
     - MAILGUN_KEY=blah
     - MAILGUN_DOMAIN=blah
     - SEND_TO=me@email.com
+    - REDIRECT_URL=
     ports:
       - 3000:80
     volumes:

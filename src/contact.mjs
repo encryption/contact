@@ -5,7 +5,7 @@ export default send => async (req, res) => {
     console.error(e);
   }
 
-  let referer = req.get('Referer');
+  let referer = process.env.REDIRECT_URL || req.get('Referer');
   if (referer) return res.redirect(referer);
 
   res.status(204).send();
